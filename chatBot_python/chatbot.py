@@ -19,7 +19,7 @@ logger = logging.getLogger(__name__)
 lemmatizer = WordNetLemmatizer()
 
 # Load intents, words, and classes
-intents_json = json.loads(open('C:/Users/utilisateur/Documents/CFA_INSTA/IACoursJohan/WorkspaceProjet/chatBot_python/intents.json').read())
+intents_json = json.loads(open('/Users/sarahsarah/Desktop/CFA-INSTA/IA/cfa_chatbot/IAChatBotGroup/chatBot_python/intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')

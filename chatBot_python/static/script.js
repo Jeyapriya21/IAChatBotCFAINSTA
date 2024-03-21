@@ -40,16 +40,47 @@ function toggleChat() {
 //fonction 
 function sendMessage() {
     var userMessage = document.getElementById("user-input").value.trim();
-    if(userMessage){
+    if (userMessage) {
         document.getElementById("chat-display").innerHTML += `<div class='message user_message'><div class='message_bubble'><img src='../static/images/userChat.png'><p>${userMessage}</p></div></div>`;
         document.getElementById("user-input").value = "";
         fetch("/get?msg=" + userMessage)
             .then(response => response.text())
             .then(data => {
-                document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p></div></div>`;
+                document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p></div><div class="message-options">
+                <button class="dislike-btn" onclick="dislikeResponse()"><img src="../static/images/dislike.png" alt="dislike" class="message-image">
+                </button>
+                </div></div>
+                <div class="bubble_bot dislikeMsg"><p><img src='../static/images/bot.png'> Merci pour votre retour. Nous essayon de nous améliorer du mieux qu'on peut !</p></div>`;
+                scrollToBottom();
             });
         document.getElementById('chat-container').scrollIntoView();
     }
 
 }
 
+function scrollToBottom() {
+    const chatDisplay = document.getElementById("chat-display");
+    chatDisplay.scrollTop = chatDisplay.scrollHeight;
+}
+
+function dislikeResponse() {
+    // Send dislike feedback to the server
+    fetch("/dislike", {
+        method: "POST",
+        body: JSON.stringify({ disliked: true }),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+        .then(response => {
+            if (response.ok) {
+                console.log("Dislike feedback sent successfully.");
+                document.getElementsByClassName('dislikeMsg')[0].style.display = 'block'
+            } else {
+                console.error("Failed to send dislike feedback.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+}

@@ -3,7 +3,7 @@
     --color-secondary: #236CC2;
     --color-background: #f2f2f2;
     --color-text: #fff;
-  }
+}
 
 body {
     font-family: Arial, sans-serif;
@@ -31,7 +31,7 @@ body {
 }
 
 #head_chatBot h1 {
-    color: var(--color-primary) ;
+    color: var(--color-primary);
     text-align: center;
     font-size: 18px;
 }
@@ -58,7 +58,8 @@ body {
     background-color: var(--color-secondary);
     padding: 20px;
 }
-#chat-container .input_msg{
+
+#chat-container .input_msg {
     width: 80%;
     display: flex;
     justify-content: space-between;
@@ -94,7 +95,7 @@ button {
     font-weight: 700;
     border-radius: 5px;
     background-color: var(--color-text);
-    color: var(--color-primary) ;
+    color: var(--color-primary);
     cursor: pointer;
 }
 
@@ -148,4 +149,29 @@ button:hover {
     align-items: flex-start;
     background-color: var(--color-background);
     color: var(--color-primary);
+}
+
+.dislike-btn {
+    background-color: transparent;
+    /* Couleur du bouton dislike */
+    color: #fff;
+    /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.message-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.message-options img {
+    width: 20px;
+}
+
+.dislikeMsg{
+    display: none;
 }

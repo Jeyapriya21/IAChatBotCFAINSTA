@@ -80,7 +80,8 @@
                 "Quelles sont les formations que vous proposez ?",
                 "Est-ce que vous avez des formations BTS ?",
                 "Est-ce que vous avez des formations Cloud ?",
-                "Est-ce que vous avez des formations Master?"
+                "Est-ce que vous avez des formations Master?",
+                "quel type de formation"
             ],
             "responses": [
                 "le CFA INSTA propose plusieurs formations en alternance en comptabilité et RH et en initiale et en alternance en informatique. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
@@ -113,7 +114,8 @@
                 "Quest-ce que CFA INSTA ?",
                 "pourquoi cfa-insta ?",
                 "Qui vous êtes ?",
-                "Que fait CFA-insta ?"
+                "Que fait CFA-insta ?",
+                "qu'est cfa insta"
             ],
             "responses": [
                 "Nous sommes un centre de formation en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH soit en initiale ou en alternance dans le domaine de l'informatique. Nos formations vont de bac+ 2 à bac+5. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
