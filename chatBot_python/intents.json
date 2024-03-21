@@ -1,0 +1,32 @@
+{"intents": [
+    {"tag": "salutations",
+     "patterns": ["", "Bonjour", "Coucou", "Comment ça va?", "J'ai une question", "Dis" , "Hello", "Salut", "salam", "wech"],
+     "responses": ["Bonjour, comment je peux vous aider?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Au revoir", "À plus tard", "À plus", "Je vous remercies"],
+     "responses": ["À très bientôt !"],
+     "context": [""]
+    },
+    {"tag": "remerciements",
+     "patterns": ["Merci", "Je vous remercie", "Cool, merci", "Good", "Merci de ton aide"],
+     "responses": ["Avec plaisir", "Heureux d'avoir pu vous aider"],
+     "context": [""]
+    },
+    {"tag": "contact",
+     "patterns": ["Quelle est l'adresse de l'école ?", "comment vous contacter ?", "Comment vous joindre ?", "l'école ouvre à quelle heure ?", "Quels sont les horaires d'ouverture de l'école ?"],
+     "responses": ["CFA-INSTA se situe au 12 Rue de Cléry, 75002 Paris, France. Nous sommes ouverts du Lundi au vendredi de 8h30 à 18h00. Il est possible de nous joindre par téléphone: +33 1 43 41 72 50 ou par mail ＠ : information@cfa-insta.fr"],
+     "context": [""]
+    },
+    {"tag": "formation",
+     "patterns": ["What is Simplilearn?"],
+     "responses": ["Simplilearn is the popular online Bootcamp & online courses learning platform "],
+     "context": [""]
+    },
+    {"tag": "rythme",
+     "patterns": ["Quel est le rythme de la formation?", "Quelle est le rythme de la formation BTS ?", "Quelle est le rythme de la formation CDA ?", "Quelle est le rythme de la formation Architecte ?"],
+     "responses": ["Simplilearn is the popular online Bootcamp & online courses learning platform "],
+     "context": [""]
+    } 
+]}
