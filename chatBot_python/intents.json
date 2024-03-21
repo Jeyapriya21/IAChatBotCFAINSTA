@@ -1,32 +1,249 @@
-{"intents": [
-    {"tag": "salutations",
-     "patterns": ["", "Bonjour", "Coucou", "Comment ça va?", "J'ai une question", "Dis" , "Hello", "Salut", "salam", "wech"],
-     "responses": ["Bonjour, comment je peux vous aider?"],
-     "context": [""]
-    },
-    {"tag": "goodbye",
-     "patterns": ["Au revoir", "À plus tard", "À plus", "Je vous remercies"],
-     "responses": ["À très bientôt !"],
-     "context": [""]
-    },
-    {"tag": "remerciements",
-     "patterns": ["Merci", "Je vous remercie", "Cool, merci", "Good", "Merci de ton aide"],
-     "responses": ["Avec plaisir", "Heureux d'avoir pu vous aider"],
-     "context": [""]
-    },
-    {"tag": "contact",
-     "patterns": ["Quelle est l'adresse de l'école ?", "comment vous contacter ?", "Comment vous joindre ?", "l'école ouvre à quelle heure ?", "Quels sont les horaires d'ouverture de l'école ?"],
-     "responses": ["CFA-INSTA se situe au 12 Rue de Cléry, 75002 Paris, France. Nous sommes ouverts du Lundi au vendredi de 8h30 à 18h00. Il est possible de nous joindre par téléphone: +33 1 43 41 72 50 ou par mail ＠ : information@cfa-insta.fr"],
-     "context": [""]
-    },
-    {"tag": "formation",
-     "patterns": ["What is Simplilearn?"],
-     "responses": ["Simplilearn is the popular online Bootcamp & online courses learning platform "],
-     "context": [""]
-    },
-    {"tag": "rythme",
-     "patterns": ["Quel est le rythme de la formation?", "Quelle est le rythme de la formation BTS ?", "Quelle est le rythme de la formation CDA ?", "Quelle est le rythme de la formation Architecte ?"],
-     "responses": ["Simplilearn is the popular online Bootcamp & online courses learning platform "],
-     "context": [""]
-    } 
-]}
+{
+    "intents": [
+        {
+            "tag": "salutations",
+            "patterns": [
+                "Bonjour",
+                "Coucou",
+                "Comment ça va?",
+                "J'ai une question",
+                "Dis",
+                "Hello",
+                "Salut",
+                "salam",
+                "wech",
+                "salam alaykoum"
+            ],
+            "responses": [
+                "Bonjour, comment je peux vous aider?"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "goodbye",
+            "patterns": [
+                "Au revoir",
+                "À plus tard",
+                "À plus",
+                "Je vous remercies"
+            ],
+            "responses": [
+                "À très bientôt !"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "remerciements",
+            "patterns": [
+                "Merci",
+                "Je vous remercie",
+                "Cool, merci",
+                "Good",
+                "Merci pour ton aide"
+            ],
+            "responses": [
+                "Avec plaisir",
+                "Heureux d'avoir pu vous aider"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "contact",
+            "patterns": [
+                "Quelle est l'adresse de l'école ?",
+                "comment vous contacter ?",
+                "Comment vous joindre ?",
+                "l'école ouvre à quelle heure ?",
+                "Quels sont les horaires d'ouverture de l'école ?",
+                "Je peux avoir votre contact ?",
+                "Où je peux vous joindre ?"
+            ],
+            "responses": [
+                "CFA INSTA se situe au 12 Rue de Cléry, 75002 Paris, France. Nous sommes ouverts du Lundi au vendredi de 8h30 à 18h00. Il est possible de nous joindre par téléphone 📞 : +33 1 43 41 72 50 ou par mail ＠ : f.badabhai@cfa-insta.fr"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "formation",
+            "patterns": [
+                "Quelles sont les formations de CFA INSTA?",
+                "Quelles sont vos formations",
+                "Que propose CFA INSTA",
+                "Quelles sont les formations que vous proposez ?",
+                "Est-ce que vous avez des formations BTS ?",
+                "Est-ce que vous avez des formations Cloud ?",
+                "Est-ce que vous avez des formations Master?"
+            ],
+            "responses": [
+                "le CFA INSTA propose plusieurs formations en alternance en comptabilité et RH et en initiale et en alternance en informatique. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "rythme",
+            "patterns": [
+                "Quel est le rythme de la formation?",
+                "Quelle est le rythme de la formation BTS ?",
+                "Quelle est le rythme de la formation CDA ?",
+                "Quelle est le rythme de la formation Architecte ?",
+                "Quel est le rythme d l'école ?",
+                "c'est quoi le rythme ?"
+            ],
+            "responses": [
+                "Le rythme des formations BTS est de 2 jours à l'école et 3 jours en entreprise. Pour les formations en CDA ou Master, le rythme est de 1 mois à l'école et 3 mois en entreprise"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cfaInsta",
+            "patterns": [
+                "C'est quoi CFA INSTA",
+                "Quest-ce que CFA INSTA ?",
+                "pourquoi cfa-insta ?",
+                "Qui vous êtes ?",
+                "Que fait CFA-insta ?"
+            ],
+            "responses": [
+                "Nous sommes un centre de formation en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH soit en initiale ou en alternance dans le domaine de l'informatique. Nos formations vont de bac+ 2 à bac+5. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "formationBTS",
+            "patterns": [
+                "quels sont vos formation BTS",
+                "Que proposez-vous en BTS",
+                "formation BTS"
+            ],
+            "responses": [
+                "CFA INSTA propose plusiseurs formation en BTS : info SIO, CIEL (plus d'information sur le lein suivant https://cfa-insta.fr/bts-sio-sisr-slam-ciel/), compta CG. (plus d'information sur le lein suivant https://cfa-insta.fr/bts-comptabilite-et-gestion-bts/)"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "Diplome",
+            "patterns": [
+                "est-ce que vos diplômes sont reconnus ?",
+                "les formations sont-elles diplômantes ?",
+                "est-ce qu'on sort avec un diplôme en fin de la formation BTS, CDA, master, SIO, CIEL, DCG?"
+            ],
+            "responses": [
+                "L’équipe, à taille humaine, du CFA INSTA est au service des étudiants pour les accompagner dans la réussite de leur projet professionnel et répondre au mieux à leurs besoins. Nos diplômes sont reconnus par l'état"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "formationMaster",
+            "patterns": [
+                "quels sont vos formation master",
+                "Que proposez-vous en master",
+                "c'est quoi la formation architecte",
+                "est-ce que vous avez des formation niveau bac +5"
+            ],
+            "responses": [
+                "Nous sommes un centre de formation en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH et en initiale et en alternance en informatique. Nos formations vont de bac+ 2 à bac+5. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "handicap",
+            "patterns": [
+                "L'école est-elle adaptée à l'handicap ?",
+                "Comment CFA INSTA gère l'handicap ?",
+                "Je suis en situation d'handicap comment je fais ?",
+                "Est-ce que l'école accèpte les personnes en situation d'handicap ?"
+            ],
+            "responses": [
+                "Les équipes du CFA INSTA sont mobilisées pour accueillir les jeunes en situation de handicap et leur proposer un accompagnement adapté. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/la-mission-handicap/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "alternance",
+            "patterns": [
+                "L'école aide-t-elle à la recherche d'alternance ? ",
+                "Comment trouver l'alternance ?",
+                "Est-ce qu'on est aidé pour l'alternance ?",
+                "Comment trouver une alternances ?"
+            ],
+            "responses": [
+                "Le CFA INSTA propose des formations, en informatique et en comptabilité, en alternance soit en contrat d’apprentissage soit en contrat de professionnalisation. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/alternance/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "initiale",
+            "patterns": [
+                "Qu'est que la formation en initiale ?",
+                "Est-ce que vous avez des formations en initiale ?",
+                "Comment se déroule les formations en initiale ?",
+                "Quelles sont les modalités de la formation en initiale",
+                "Quelle es le tarif de la formation en initiale ?"
+            ],
+            "responses": [
+                "La formation initiale désigne la première formation obtenue au terme d’un cycle d’étude suivi dans le cadre scolaire et sans alternance. pour plus d'information veuillez consulter le lien https://cfa-insta.fr/formation-initiale/"
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "cours",
+            "patterns": [
+                "Les cours sont-ils en présentiel ?",
+                "Les cours sont-ils à distance ?",
+                "La formation est-elle à distance ?",
+                "La formation est-elle en présentiel ?",
+                "Est-ce que la formation est en distanciel ?",
+                "Est-ce que les cours sont à distance ?",
+                "Les cours sont-ils en lignes ?"
+            ],
+            "responses": [
+                "Toutes les formations sont en présentiel et se déroulent dans nos locaux au 12 Rue de Cléry, 75002 Paris, France."
+            ],
+            "context": [
+                ""
+            ]
+        },
+        {
+            "tag": "entreprise",
+            "patterns": [
+                "Est-ce que vous avez des partenaires d'entreprise",
+                "Qui sont vos partenaires ?",
+                "Travaillez-vous avec des entreprises ?",
+                "Pour l'alternance avez des entreprises partenaires ?",
+                "Est-ce qu'on est accopagné dans notre recherche d'entreprise"
+            ],
+            "responses": [
+                "Nous avons des partenaires comme Cisco, Citrix, Microsoft, Orange, Ministère, Banques... Beaucoup de nos étudiants ont pu intégrer ces entreprises"
+            ],
+            "context": [
+                ""
+            ]
+        }
+    ]
+}

@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CFA INSTA</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>CFA-Chatbot</title>
 </head>
-
-<body>
+<body> 
     <div id="chatBot">
-        <div id="head_chatBot" onclick="toggleChat()">
+        <div id="head_chatBot" onclick = "toggleChat()">
             <img class="logo" src="{{ url_for('static', filename='images/chatbot_logo.gif') }}" alt="BotLogo">
             <h1>Hello ! Je suis l'assistant de Faizah</h1>
         </div>
+
         <div id="chat-container">
             <div id="chat-display"></div>
             <div id="msg">
-                <input type="text" id="user-input" placeholder="Ecrivez votre message...">
-                <img onclick="startRecognition()" class="micro"
-                    src="{{ url_for('static', filename='images/micro.png') }}" alt="micro"
-                    style="width:20px; height:20px">
-                <button onclick="sendMessage()">
-                    <img class="logo" src="{{ url_for('static', filename='images/envoyer.png') }}" alt="SendLogo"
-                        style="width:20px; height:20px">
-                </button>
+                <div class="input_msg">
+                    <input type="text" id="user-input" placeholder="Ecrivez votre message...">
+                    <img onclick="startRecognition()" class="micro" src="{{ url_for('static', filename='images/micro.png') }}" alt="micro">
+                </div>
+                <button onclick="sendMessage()">></button>
             </div>
         </div>
     </div>
-
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
-
 </html>

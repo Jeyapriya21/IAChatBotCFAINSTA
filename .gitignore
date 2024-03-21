@@ -15,3 +15,21 @@ venv/
 *.log
 
 envChat/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+.env/
+
+# Ignore IDE-specific files
+.vscode/
+.idea/
+
+# Ignore local configuration files
+*.ini
+*.conf
+*.log
+
+envChat/

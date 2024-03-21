@@ -3,13 +3,12 @@ import json
 import pickle
 import numpy as np
 import tensorflow as tf
-
 import nltk
 from nltk.stem import WordNetLemmatizer
-
+# initialisation pour la lemmatisation --> forme de base 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('C:/Users/utilisateur/Documents/CFA_INSTA/IACoursJohan/WorkspaceProjet/chatBot_python/intents.json').read())
+intents = json.loads(open('/Users/sarahsarah/Desktop/CFA-INSTA/IA/cfa_chatbot/IAChatBotGroup/chatBot_python/intents.json').read())
 
 words = []
 classes = []
