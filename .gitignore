@@ -31,5 +31,5 @@ venv/
 *.ini
 *.conf
 *.log
-
+*.DS_Store
 envChat/
