@@ -49,9 +49,8 @@ function sendMessage() {
                 document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p></div><div class="message-options">
                 <button class="dislike-btn" onclick="dislikeResponse()"><img src="../static/images/dislike.png" alt="dislike" class="message-image">
                 </button>
-                </div></div>
-                <div class="bubble_bot dislikeMsg"><p><img src='../static/images/bot.png'> Merci pour votre retour. Nous essayon de nous améliorer du mieux qu'on peut !</p></div>`;
-                scrollToBottom();
+            </div></div>`;
+            scrollToBottom();
             });
         document.getElementById('chat-container').scrollIntoView();
     }
@@ -75,7 +74,7 @@ function dislikeResponse() {
         .then(response => {
             if (response.ok) {
                 console.log("Dislike feedback sent successfully.");
-                document.getElementsByClassName('dislikeMsg')[0].style.display = 'block'
+                alert('Merci pour votre retour. Nous prenons votre retour en considération')
             } else {
                 console.error("Failed to send dislike feedback.");
             }

@@ -62,7 +62,8 @@
                 "l'école ouvre à quelle heure ?",
                 "Quels sont les horaires d'ouverture de l'école ?",
                 "Je peux avoir votre contact ?",
-                "Où je peux vous joindre ?"
+                "Où je peux vous joindre ?",
+                "école"
             ],
             "responses": [
                 "CFA INSTA se situe au 12 Rue de Cléry, 75002 Paris, France. Nous sommes ouverts du Lundi au vendredi de 8h30 à 18h00. Il est possible de nous joindre par téléphone 📞 : +33 1 43 41 72 50 ou par mail ＠ : f.badabhai@cfa-insta.fr"
@@ -81,7 +82,8 @@
                 "Est-ce que vous avez des formations BTS ?",
                 "Est-ce que vous avez des formations Cloud ?",
                 "Est-ce que vous avez des formations Master?",
-                "quel type de formation"
+                "quel type de formation",
+                "formation"
             ],
             "responses": [
                 "le CFA INSTA propose plusieurs formations en alternance en comptabilité et RH et en initiale et en alternance en informatique. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
@@ -129,7 +131,8 @@
             "patterns": [
                 "quels sont vos formation BTS",
                 "Que proposez-vous en BTS",
-                "formation BTS"
+                "formation BTS",
+                "BTS"
             ],
             "responses": [
                 "CFA INSTA propose plusiseurs formation en BTS : info SIO, CIEL (plus d'information sur le lein suivant https://cfa-insta.fr/bts-sio-sisr-slam-ciel/), compta CG. (plus d'information sur le lein suivant https://cfa-insta.fr/bts-comptabilite-et-gestion-bts/)"
@@ -161,7 +164,7 @@
                 "est-ce que vous avez des formation niveau bac +5"
             ],
             "responses": [
-                "Nous sommes un centre de formation en alternance (contrat d’apprentissage ou de professionnalisation) en comptabilité et RH et en initiale et en alternance en informatique. Nos formations vont de bac+ 2 à bac+5. Pour plus d'information vous pouvez consulter le lien https://cfa-insta.fr/qui-sommes-nous/"
+                "CFA Insta propose plusieurs formations en alternance de niveau bac+4 et bac+5 en informatique. ARCHITECTE DES SYSTEMES D'INFORMATIONS https://cfa-insta.fr/architecte-si/, Expert Spécialiste de la sécurité des données, des réseaux et des systèmes https://cfa-insta.fr/gestionnaire-de-la-securite/, Expert Spécialiste de la sécurité des données, des réseaux et des systèmes https://cfa-insta.fr/gestionnaire-de-la-securite/, Architecte des systèmes d'informations https://cfa-insta.fr/architecte-si/, EXPERT EN INTELLIGENCE ARTIFICIELLE https://cfa-insta.fr/expert-en-intelligence-artificielle/, Master STL https://cfa-insta.fr/master-2-stl-sciences-et-technologies-du-logiciel-en-partenariat-avec-la-sorbonne-universite/"
             ],
             "context": [
                 ""
