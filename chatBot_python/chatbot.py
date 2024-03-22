@@ -24,6 +24,9 @@ words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('chatbot_model.h5')
 
+# initialise la mémoire pour les reponses dislike 
+disliked_responses = set()
+
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
     sentence_words = [lemmatizer.lemmatize(word) for word in sentence_words]
@@ -57,6 +60,9 @@ def get_response(intents_list, intents_json):
     for i in list_of_intents:
         if i['tag'] == tag:
             result = random.choice(i['responses'])
+            if result in disliked_responses:
+                logger.warning(f"Dislike response '{result}' was avoided.")
+                result = None
             break
     if result is None:
         logger.warning("No appropriate response found for the user's input.")
@@ -86,6 +92,7 @@ def get_bot_response():
 def handle_dislike():
     data = request.get_json()
     if data.get('disliked'):
+        disliked_responses.add(data['response'])
         logger.warning("User disliked the bot's response.")
     return jsonify({'message': 'Dislike feedback received.'}), 200
 

@@ -46,11 +46,12 @@ function sendMessage() {
         fetch("/get?msg=" + userMessage)
             .then(response => response.text())
             .then(data => {
-                document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p></div><div class="message-options">
-                <button class="dislike-btn" onclick="dislikeResponse()"><img src="../static/images/dislike.png" alt="dislike" class="message-image">
+                document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p><div class="message-options">
+                <button class="dislike-btn" onclick="dislikeResponse('${data}')"><img src="../static/images/dislike.png" alt="dislike" class="message-image">
                 </button>
-            </div></div>`;
-            scrollToBottom();
+            </div></div></div>`;
+                dislikeResponseMsg();
+                scrollToBottom();
             });
         document.getElementById('chat-container').scrollIntoView();
     }
@@ -66,20 +67,24 @@ function dislikeResponse() {
     // Send dislike feedback to the server
     fetch("/dislike", {
         method: "POST",
-        body: JSON.stringify({ disliked: true }),
         headers: {
             "Content-Type": "application/json"
-        }
+        },
+        body: JSON.stringify({ disliked: true, response: response })
     })
-        .then(response => {
-            if (response.ok) {
-                console.log("Dislike feedback sent successfully.");
-                alert('Merci pour votre retour. Nous prenons votre retour en considération')
-            } else {
-                console.error("Failed to send dislike feedback.");
-            }
-        })
+        .then(response => response.json())
+        .then(data => console.log(data))
         .catch(error => {
             console.error("Error:", error);
         });
+}
+
+function dislikeResponseMsg() {
+    const dislikeButtons = document.querySelectorAll('.dislike-btn');
+    dislikeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const message = this.parentElement;
+            message.classList.add("dislikeResponse")
+        });
+    });
 }

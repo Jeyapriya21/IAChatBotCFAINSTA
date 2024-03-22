@@ -171,3 +171,7 @@ button:hover {
 .message-options img {
     width: 20px;
 }
+
+.dislikeResponse {
+    border: red solid 3px;
+}
