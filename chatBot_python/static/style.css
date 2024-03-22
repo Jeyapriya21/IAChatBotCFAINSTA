@@ -149,3 +149,16 @@ button:hover {
     background-color: var(--color-background);
     color: var(--color-primary);
 }
+.message-options {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.message-options img {
+    width: 20px;
+}
+
+.dislikeMsg{
+    display: none;
+}
