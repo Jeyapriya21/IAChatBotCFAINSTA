@@ -3,16 +3,7 @@
         {
             "tag": "salutations",
             "patterns": [
-                "Bonjour",
-                "Coucou",
-                "Comment ça va?",
-                "J'ai une question",
-                "Dis",
-                "Hello",
-                "Salut",
-                "salam",
-                "wech",
-                "salam alaykoum"
+                "Bonjour", "Coucou", "Comment ça va?", "J'ai une question", "Dis", "Hello", "Salut", "salam", "wech", "salam alaykoum"
             ],
             "responses": [
                 "Bonjour, comment je peux vous aider?"
@@ -24,10 +15,7 @@
         {
             "tag": "goodbye",
             "patterns": [
-                "Au revoir",
-                "À plus tard",
-                "À plus",
-                "Je vous remercies"
+                "Au revoir", "À plus tard", "À plus", "Je vous remercies"
             ],
             "responses": [
                 "À très bientôt !"
@@ -39,15 +27,10 @@
         {
             "tag": "remerciements",
             "patterns": [
-                "Merci",
-                "Je vous remercie",
-                "Cool, merci",
-                "Good",
-                "Merci pour ton aide"
+                "Merci", "Je vous remercie", "Cool, merci", "Good", "Merci pour ton aide"
             ],
             "responses": [
-                "Avec plaisir",
-                "Heureux d'avoir pu vous aider"
+                "Avec plaisir", "Heureux d'avoir pu vous aider"
             ],
             "context": [
                 ""
@@ -56,8 +39,7 @@
         {
             "tag": "contact",
             "patterns": [
-                "Quelle est l'adresse de l'école ?",
-                "comment vous contacter ?",
+                "Quelle est l'adresse de l'école ?", "comment vous contacter ?",
                 "Comment vous joindre ?",
                 "l'école ouvre à quelle heure ?",
                 "Quels sont les horaires d'ouverture de l'école ?",

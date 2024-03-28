@@ -94,6 +94,7 @@ def handle_dislike():
     if data.get('disliked'):
         disliked_responses.add(data['response'])
         logger.warning("User disliked the bot's response.")
+        print("Dislike feedback received.")
     return jsonify({'message': 'Dislike feedback received.'}), 200
 
 if __name__ == '__main__':

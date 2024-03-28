@@ -63,14 +63,14 @@ function scrollToBottom() {
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
 }
 
-function dislikeResponse() {
+function dislikeResponse(res) {
     // Send dislike feedback to the server
     fetch("/dislike", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ disliked: true, response: response })
+        body: JSON.stringify({ disliked: true, response: res }) 
     })
         .then(response => response.json())
         .then(data => console.log(data))
