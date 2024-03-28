@@ -159,6 +159,6 @@ button:hover {
     width: 20px;
 }
 
-.dislikeMsg{
-    display: none;
+.dislikeResponse{
+    border: red solid 3px;
 }

@@ -40,7 +40,7 @@ function toggleChat() {
 //fonction 
 function sendMessage() {
     var userMessage = document.getElementById("user-input").value.trim();
-    if(userMessage){
+    if (userMessage) {
         document.getElementById("chat-display").innerHTML += `<div class='message user_message'><div class='message_bubble'><img src='../static/images/userChat.png'><p>${userMessage}</p></div></div>`;
         document.getElementById("user-input").value = "";
         fetch("/get?msg=" + userMessage)
@@ -49,8 +49,8 @@ function sendMessage() {
                 document.getElementById("chat-display").innerHTML += `<div class='message bot_message'><div class='bubble_bot'><img src='../static/images/bot.png'><p>${data}</p></div><div class="message-options">
                 <button class="dislike-btn" onclick="dislikeResponse('${data}')"><img src="../static/images/dislike.png" alt="dislike" class="message-image">
                 </button>
-            </div></div>
-            <div class="bubble_bot dislikeMsg"><p><img src='../static/images/bot.png'> Merci pour votre retour. Nous essayon de nous améliorer du mieux qu'on peut !</p></div>`;;
+            </div></div>`;
+                // dislikeResponseMsg();
                 scrollToBottom(); // Scroll to bottom after adding the message
             });
         document.getElementById('chat-container').scrollIntoView();
@@ -63,40 +63,27 @@ function scrollToBottom() {
     chatDisplay.scrollTop = chatDisplay.scrollHeight;
 }
 
-// function dislikeResponse() {
-//     // Send dislike feedback to the server
-//     fetch("/dislike", {
-//         method: "POST",
-//         body: JSON.stringify({ disliked: true }),
-//         headers: {
-//             "Content-Type": "application/json"
-//         }
-//     })
-//     .then(response => {
-//         if (response.ok) {
-//             console.log("Dislike feedback sent successfully.");
-//             document.getElementsByClassName('dislikeMsg')[0].style.display = 'block';
-//         } else {
-//             console.error("Failed to send dislike feedback.");
-//         }
-//     })
-//     .catch(error => {
-//         console.error("Error:", error);
-//     });
-// }
-
 // JavaScript code for sending dislike feedback
-function dislikeResponse(response) {
+function dislikeResponse(res) {
     fetch('/dislike', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ disliked: true, response: response })
+        body: JSON.stringify({ disliked: true, response: res })
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error:', error));
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
 }
 
+function dislikeResponseMsg() {
+    const dislikeButtons = document.querySelectorAll('.dislike-btn');
+    dislikeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const message = this.parentElement;
+            message.classList.add("dislikeResponse")
+        })
+    })
+}
 
